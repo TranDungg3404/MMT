@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features>
+    <feature
+        id="INET"
+        name="INET Framework"
+        description="The INET Framework network simulation library."
+        initiallyEnabled="true"
+        requireComponents="inet.common.SelfTest"
+        labels="Core" />
+</features>
