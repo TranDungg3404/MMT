@@ -1,0 +1,229 @@
+version 3
+run KichBan_3_RoutingLoop-0-20260626-04:16:13-34420
+attr configname KichBan_3_RoutingLoop
+attr datetime 20260626-04:16:13
+attr datetimef 20260626-041613
+attr experiment KichBan_3_RoutingLoop
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network mmt.src.IGRP_DistanceVector
+attr processid 34420
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config description "Tat Split Horizon va Triggered Update de the hien vong lap vo tan khi dut cap"
+config sim-time-limit 800s
+config **.R1.isSender true
+config **.R1.destNode "\"R4\""
+config **.enableSplitHorizon false
+config **.enableTriggeredUpdate false
+config **.R2.failTime 150s
+config **.R2.failNeighbor "\"R7\""
+config **.R7.failTime 150s
+config **.R7.failNeighbor "\"R2\""
+config network mmt.src.IGRP_DistanceVector
+config sim-time-limit 800s
+
+par IGRP_DistanceVector.R1.out[0].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R1.out[0].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R1.out[0].channel delay 0.02s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R1.out[0].channel bandwidth_kbps 50000
+par IGRP_DistanceVector.R2.out[0].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R2.out[0].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R2.out[0].channel delay 0.02s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R2.out[0].channel bandwidth_kbps 50000
+par IGRP_DistanceVector.R1.out[1].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R1.out[1].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R1.out[1].channel delay 0.05s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R1.out[1].channel bandwidth_kbps 20000
+par IGRP_DistanceVector.R6.out[0].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R6.out[0].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R6.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R6.out[0].channel bandwidth_kbps 20000
+par IGRP_DistanceVector.R2.out[1].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R2.out[1].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R2.out[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R2.out[1].channel bandwidth_kbps 100000
+par IGRP_DistanceVector.R3.out[0].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R3.out[0].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R3.out[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R3.out[0].channel bandwidth_kbps 100000
+par IGRP_DistanceVector.R2.out[2].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R2.out[2].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R2.out[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R2.out[2].channel bandwidth_kbps 100000
+par IGRP_DistanceVector.R6.out[1].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R6.out[1].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R6.out[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R6.out[1].channel bandwidth_kbps 100000
+par IGRP_DistanceVector.R3.out[1].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R3.out[1].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R3.out[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R3.out[1].channel bandwidth_kbps 100000
+par IGRP_DistanceVector.R4.out[0].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R4.out[0].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R4.out[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R4.out[0].channel bandwidth_kbps 100000
+par IGRP_DistanceVector.R3.out[2].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R3.out[2].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R3.out[2].channel delay 0.02s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R3.out[2].channel bandwidth_kbps 50000
+par IGRP_DistanceVector.R5.out[0].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R5.out[0].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R5.out[0].channel delay 0.02s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R5.out[0].channel bandwidth_kbps 50000
+par IGRP_DistanceVector.R3.out[3].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R3.out[3].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R3.out[3].channel delay 0.03s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R3.out[3].channel bandwidth_kbps 33333
+par IGRP_DistanceVector.R6.out[2].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R6.out[2].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R6.out[2].channel delay 0.03s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R6.out[2].channel bandwidth_kbps 33333
+par IGRP_DistanceVector.R4.out[1].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R4.out[1].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R4.out[1].channel delay 0.02s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R4.out[1].channel bandwidth_kbps 50000
+par IGRP_DistanceVector.R5.out[1].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R5.out[1].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R5.out[1].channel delay 0.02s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R5.out[1].channel bandwidth_kbps 50000
+par IGRP_DistanceVector.R5.out[2].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R5.out[2].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R5.out[2].channel delay 0.03s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R5.out[2].channel bandwidth_kbps 33333
+par IGRP_DistanceVector.R6.out[3].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R6.out[3].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R6.out[3].channel delay 0.03s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R6.out[3].channel bandwidth_kbps 33333
+par IGRP_DistanceVector.R2.out[3].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R2.out[3].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R2.out[3].channel delay 0.01s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R2.out[3].channel bandwidth_kbps 100000
+par IGRP_DistanceVector.R7.out[0].channel typename "\"mmt.src.Cap_IGRP\""
+par IGRP_DistanceVector.R7.out[0].channel disabled false
+attr mutable ""
+par IGRP_DistanceVector.R7.out[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par IGRP_DistanceVector.R7.out[0].channel bandwidth_kbps 100000
+par IGRP_DistanceVector.R1 typename "\"mmt.src.RouterDV\""
+par IGRP_DistanceVector.R1 failTime -1s
+attr unit s
+par IGRP_DistanceVector.R1 failNeighbor "\"\""
+par IGRP_DistanceVector.R1 enableSplitHorizon false
+par IGRP_DistanceVector.R1 enableTriggeredUpdate false
+par IGRP_DistanceVector.R1 isSender true
+par IGRP_DistanceVector.R1 destNode "\"R4\""
+par IGRP_DistanceVector.R2 typename "\"mmt.src.RouterDV\""
+par IGRP_DistanceVector.R2 failTime 150s
+attr unit s
+par IGRP_DistanceVector.R2 failNeighbor "\"R7\""
+par IGRP_DistanceVector.R2 enableSplitHorizon false
+par IGRP_DistanceVector.R2 enableTriggeredUpdate false
+par IGRP_DistanceVector.R2 isSender false
+par IGRP_DistanceVector.R2 destNode "\"\""
+par IGRP_DistanceVector.R3 typename "\"mmt.src.RouterDV\""
+par IGRP_DistanceVector.R3 failTime -1s
+attr unit s
+par IGRP_DistanceVector.R3 failNeighbor "\"\""
+par IGRP_DistanceVector.R3 enableSplitHorizon false
+par IGRP_DistanceVector.R3 enableTriggeredUpdate false
+par IGRP_DistanceVector.R3 isSender false
+par IGRP_DistanceVector.R3 destNode "\"\""
+par IGRP_DistanceVector.R4 typename "\"mmt.src.RouterDV\""
+par IGRP_DistanceVector.R4 failTime -1s
+attr unit s
+par IGRP_DistanceVector.R4 failNeighbor "\"\""
+par IGRP_DistanceVector.R4 enableSplitHorizon false
+par IGRP_DistanceVector.R4 enableTriggeredUpdate false
+par IGRP_DistanceVector.R4 isSender false
+par IGRP_DistanceVector.R4 destNode "\"\""
+par IGRP_DistanceVector.R5 typename "\"mmt.src.RouterDV\""
+par IGRP_DistanceVector.R5 failTime -1s
+attr unit s
+par IGRP_DistanceVector.R5 failNeighbor "\"\""
+par IGRP_DistanceVector.R5 enableSplitHorizon false
+par IGRP_DistanceVector.R5 enableTriggeredUpdate false
+par IGRP_DistanceVector.R5 isSender false
+par IGRP_DistanceVector.R5 destNode "\"\""
+par IGRP_DistanceVector.R6 typename "\"mmt.src.RouterDV\""
+par IGRP_DistanceVector.R6 failTime -1s
+attr unit s
+par IGRP_DistanceVector.R6 failNeighbor "\"\""
+par IGRP_DistanceVector.R6 enableSplitHorizon false
+par IGRP_DistanceVector.R6 enableTriggeredUpdate false
+par IGRP_DistanceVector.R6 isSender false
+par IGRP_DistanceVector.R6 destNode "\"\""
+par IGRP_DistanceVector.R7 typename "\"mmt.src.RouterDV\""
+par IGRP_DistanceVector.R7 failTime 150s
+attr unit s
+par IGRP_DistanceVector.R7 failNeighbor "\"R2\""
+par IGRP_DistanceVector.R7 enableSplitHorizon false
+par IGRP_DistanceVector.R7 enableTriggeredUpdate false
+par IGRP_DistanceVector.R7 isSender false
+par IGRP_DistanceVector.R7 destNode "\"\""
+par IGRP_DistanceVector typename "\"mmt.src.IGRP_DistanceVector\""
+

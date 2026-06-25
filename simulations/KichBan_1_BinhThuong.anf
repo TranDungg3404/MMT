@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<analysis version="2">
+    <inputs>
+        <input pattern="/mmt/simulations/results/KichBan_1_BinhThuong-*.vec"/>
+        <input pattern="/mmt/simulations/results/KichBan_1_BinhThuong-*.sca"/>
+    </inputs>
+    <charts/>
+</analysis>

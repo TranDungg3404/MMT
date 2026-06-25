@@ -3,6 +3,17 @@ package mmt.src;
 
 simple RouterDV
 {
+    parameters:
+        double failTime @unit(s) = default(-1s); // Thời điểm đứt cáp (-1 nghĩa là không đứt)
+        string failNeighbor = default("");       // Tên router láng giềng bị mất kết nối (VD: "R3")
+        
+        //ĐIỀU KHIỂN BẢO VỆ ---
+        bool enableSplitHorizon = default(true); 
+        bool enableTriggeredUpdate = default(true);
+        
+        bool isSender = default(false);    // Router này có phải là máy phát dữ liệu không?
+        string destNode = default("");     // Nếu là máy phát, thì muốn gửi dữ liệu đến ai?
+        
     gates:
         input in[];
         output out[];
@@ -14,7 +25,7 @@ channel Cap_IGRP extends ned.DelayChannel {
     double bandwidth_kbps = default(100000); // Băng thông mặc định (kbps)
 }
 
-network RIP_DistanceVector
+network IGRP_DistanceVector
 {
     @display("bgb=600,400");
     submodules:
@@ -24,6 +35,7 @@ network RIP_DistanceVector
         R4: RouterDV { @display("p=100,200"); }
         R5: RouterDV { @display("p=200,100"); }
         R6: RouterDV { @display("p=400,100"); }
+        R7: RouterDV { @display("p=400,400"); }
         
     connections:
         // --- 1. Tuyến 1 <-> 2 (Mức giá 2) ---
@@ -61,4 +73,9 @@ network RIP_DistanceVector
         // --- 9. Tuyến 5 <-> 6 (Mức giá 3) ---
         R5.out++ --> Cap_IGRP { delay = 30ms; bandwidth_kbps = 33333; } --> R6.in++;
         R6.out++ --> Cap_IGRP { delay = 30ms; bandwidth_kbps = 33333; } --> R5.in++;
+        
+        // --- 10. Tuyến 2 <-> 7 (Mạng cụt Stub-network) ---
+        R2.out++ --> Cap_IGRP { delay = 10ms; bandwidth_kbps = 100000; } --> R7.in++;
+        R7.out++ --> Cap_IGRP { delay = 10ms; bandwidth_kbps = 100000; } --> R2.in++;
+        
 }
