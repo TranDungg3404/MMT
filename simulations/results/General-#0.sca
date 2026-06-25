@@ -1,8 +1,8 @@
 version 3
-run General-0-20260625-22:33:54-5864
+run General-0-20260626-01:27:16-35448
 attr configname General
-attr datetime 20260625-22:33:54
-attr datetimef 20260625-223354
+attr datetime 20260626-01:27:16
+attr datetimef 20260626-012716
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,79 +10,146 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network mmt.src.RIP_DistanceVector
-attr processid 5864
+attr processid 35448
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 config network mmt.src.RIP_DistanceVector
-config sim-time-limit 35s
+config sim-time-limit 200s
 
-par RIP_DistanceVector.R1.out[0].channel typename "\"ned.DelayChannel\""
+par RIP_DistanceVector.R1.out[0].channel typename "\"mmt.src.Cap_IGRP\""
 par RIP_DistanceVector.R1.out[0].channel disabled false
 attr mutable ""
-par RIP_DistanceVector.R1.out[0].channel delay 0.1s
+par RIP_DistanceVector.R1.out[0].channel delay 0.02s
 attr mutable ""
 attr unit s
-par RIP_DistanceVector.R2.out[0].channel typename "\"ned.DelayChannel\""
+par RIP_DistanceVector.R1.out[0].channel bandwidth_kbps 50000
+par RIP_DistanceVector.R2.out[0].channel typename "\"mmt.src.Cap_IGRP\""
 par RIP_DistanceVector.R2.out[0].channel disabled false
 attr mutable ""
-par RIP_DistanceVector.R2.out[0].channel delay 0.1s
+par RIP_DistanceVector.R2.out[0].channel delay 0.02s
 attr mutable ""
 attr unit s
-par RIP_DistanceVector.R2.out[1].channel typename "\"ned.DelayChannel\""
+par RIP_DistanceVector.R2.out[0].channel bandwidth_kbps 50000
+par RIP_DistanceVector.R1.out[1].channel typename "\"mmt.src.Cap_IGRP\""
+par RIP_DistanceVector.R1.out[1].channel disabled false
+attr mutable ""
+par RIP_DistanceVector.R1.out[1].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RIP_DistanceVector.R1.out[1].channel bandwidth_kbps 20000
+par RIP_DistanceVector.R6.out[0].channel typename "\"mmt.src.Cap_IGRP\""
+par RIP_DistanceVector.R6.out[0].channel disabled false
+attr mutable ""
+par RIP_DistanceVector.R6.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RIP_DistanceVector.R6.out[0].channel bandwidth_kbps 20000
+par RIP_DistanceVector.R2.out[1].channel typename "\"mmt.src.Cap_IGRP\""
 par RIP_DistanceVector.R2.out[1].channel disabled false
 attr mutable ""
-par RIP_DistanceVector.R2.out[1].channel delay 0.1s
+par RIP_DistanceVector.R2.out[1].channel delay 0.01s
 attr mutable ""
 attr unit s
-par RIP_DistanceVector.R3.out[0].channel typename "\"ned.DelayChannel\""
+par RIP_DistanceVector.R2.out[1].channel bandwidth_kbps 100000
+par RIP_DistanceVector.R3.out[0].channel typename "\"mmt.src.Cap_IGRP\""
 par RIP_DistanceVector.R3.out[0].channel disabled false
 attr mutable ""
-par RIP_DistanceVector.R3.out[0].channel delay 0.1s
+par RIP_DistanceVector.R3.out[0].channel delay 0.01s
 attr mutable ""
 attr unit s
-par RIP_DistanceVector.R3.out[1].channel typename "\"ned.DelayChannel\""
-par RIP_DistanceVector.R3.out[1].channel disabled false
-attr mutable ""
-par RIP_DistanceVector.R3.out[1].channel delay 0.1s
-attr mutable ""
-attr unit s
-par RIP_DistanceVector.R4.out[0].channel typename "\"ned.DelayChannel\""
-par RIP_DistanceVector.R4.out[0].channel disabled false
-attr mutable ""
-par RIP_DistanceVector.R4.out[0].channel delay 0.1s
-attr mutable ""
-attr unit s
-par RIP_DistanceVector.R4.out[1].channel typename "\"ned.DelayChannel\""
-par RIP_DistanceVector.R4.out[1].channel disabled false
-attr mutable ""
-par RIP_DistanceVector.R4.out[1].channel delay 0.1s
-attr mutable ""
-attr unit s
-par RIP_DistanceVector.R5.out[0].channel typename "\"ned.DelayChannel\""
-par RIP_DistanceVector.R5.out[0].channel disabled false
-attr mutable ""
-par RIP_DistanceVector.R5.out[0].channel delay 0.1s
-attr mutable ""
-attr unit s
-par RIP_DistanceVector.R2.out[2].channel typename "\"ned.DelayChannel\""
+par RIP_DistanceVector.R3.out[0].channel bandwidth_kbps 100000
+par RIP_DistanceVector.R2.out[2].channel typename "\"mmt.src.Cap_IGRP\""
 par RIP_DistanceVector.R2.out[2].channel disabled false
 attr mutable ""
-par RIP_DistanceVector.R2.out[2].channel delay 0.1s
+par RIP_DistanceVector.R2.out[2].channel delay 0.01s
 attr mutable ""
 attr unit s
-par RIP_DistanceVector.R5.out[1].channel typename "\"ned.DelayChannel\""
+par RIP_DistanceVector.R2.out[2].channel bandwidth_kbps 100000
+par RIP_DistanceVector.R6.out[1].channel typename "\"mmt.src.Cap_IGRP\""
+par RIP_DistanceVector.R6.out[1].channel disabled false
+attr mutable ""
+par RIP_DistanceVector.R6.out[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par RIP_DistanceVector.R6.out[1].channel bandwidth_kbps 100000
+par RIP_DistanceVector.R3.out[1].channel typename "\"mmt.src.Cap_IGRP\""
+par RIP_DistanceVector.R3.out[1].channel disabled false
+attr mutable ""
+par RIP_DistanceVector.R3.out[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par RIP_DistanceVector.R3.out[1].channel bandwidth_kbps 100000
+par RIP_DistanceVector.R4.out[0].channel typename "\"mmt.src.Cap_IGRP\""
+par RIP_DistanceVector.R4.out[0].channel disabled false
+attr mutable ""
+par RIP_DistanceVector.R4.out[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par RIP_DistanceVector.R4.out[0].channel bandwidth_kbps 100000
+par RIP_DistanceVector.R3.out[2].channel typename "\"mmt.src.Cap_IGRP\""
+par RIP_DistanceVector.R3.out[2].channel disabled false
+attr mutable ""
+par RIP_DistanceVector.R3.out[2].channel delay 0.02s
+attr mutable ""
+attr unit s
+par RIP_DistanceVector.R3.out[2].channel bandwidth_kbps 50000
+par RIP_DistanceVector.R5.out[0].channel typename "\"mmt.src.Cap_IGRP\""
+par RIP_DistanceVector.R5.out[0].channel disabled false
+attr mutable ""
+par RIP_DistanceVector.R5.out[0].channel delay 0.02s
+attr mutable ""
+attr unit s
+par RIP_DistanceVector.R5.out[0].channel bandwidth_kbps 50000
+par RIP_DistanceVector.R3.out[3].channel typename "\"mmt.src.Cap_IGRP\""
+par RIP_DistanceVector.R3.out[3].channel disabled false
+attr mutable ""
+par RIP_DistanceVector.R3.out[3].channel delay 0.03s
+attr mutable ""
+attr unit s
+par RIP_DistanceVector.R3.out[3].channel bandwidth_kbps 33333
+par RIP_DistanceVector.R6.out[2].channel typename "\"mmt.src.Cap_IGRP\""
+par RIP_DistanceVector.R6.out[2].channel disabled false
+attr mutable ""
+par RIP_DistanceVector.R6.out[2].channel delay 0.03s
+attr mutable ""
+attr unit s
+par RIP_DistanceVector.R6.out[2].channel bandwidth_kbps 33333
+par RIP_DistanceVector.R4.out[1].channel typename "\"mmt.src.Cap_IGRP\""
+par RIP_DistanceVector.R4.out[1].channel disabled false
+attr mutable ""
+par RIP_DistanceVector.R4.out[1].channel delay 0.02s
+attr mutable ""
+attr unit s
+par RIP_DistanceVector.R4.out[1].channel bandwidth_kbps 50000
+par RIP_DistanceVector.R5.out[1].channel typename "\"mmt.src.Cap_IGRP\""
 par RIP_DistanceVector.R5.out[1].channel disabled false
 attr mutable ""
-par RIP_DistanceVector.R5.out[1].channel delay 0.1s
+par RIP_DistanceVector.R5.out[1].channel delay 0.02s
 attr mutable ""
 attr unit s
+par RIP_DistanceVector.R5.out[1].channel bandwidth_kbps 50000
+par RIP_DistanceVector.R5.out[2].channel typename "\"mmt.src.Cap_IGRP\""
+par RIP_DistanceVector.R5.out[2].channel disabled false
+attr mutable ""
+par RIP_DistanceVector.R5.out[2].channel delay 0.03s
+attr mutable ""
+attr unit s
+par RIP_DistanceVector.R5.out[2].channel bandwidth_kbps 33333
+par RIP_DistanceVector.R6.out[3].channel typename "\"mmt.src.Cap_IGRP\""
+par RIP_DistanceVector.R6.out[3].channel disabled false
+attr mutable ""
+par RIP_DistanceVector.R6.out[3].channel delay 0.03s
+attr mutable ""
+attr unit s
+par RIP_DistanceVector.R6.out[3].channel bandwidth_kbps 33333
 par RIP_DistanceVector.R1 typename "\"mmt.src.RouterDV\""
 par RIP_DistanceVector.R2 typename "\"mmt.src.RouterDV\""
 par RIP_DistanceVector.R3 typename "\"mmt.src.RouterDV\""
 par RIP_DistanceVector.R4 typename "\"mmt.src.RouterDV\""
 par RIP_DistanceVector.R5 typename "\"mmt.src.RouterDV\""
+par RIP_DistanceVector.R6 typename "\"mmt.src.RouterDV\""
 par RIP_DistanceVector typename "\"mmt.src.RIP_DistanceVector\""
 
